@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en"><head>
+  
+  
+  <meta charset="UTF-8">
+  <title>Build a Floating Lantern Sky Background (Source Code)</title>
+  <style>
+    body { background: linear-gradient(to top, #0f172a, #020617); height: 100vh; margin: 0; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; font-family: serif;}
+    h1 { font-size: 4rem; z-index: 10; margin: 0; text-shadow: 0 4px 20px rgba(0,0,0,0.8);}
+    p { z-index: 10; font-size: 1.5rem; color: #cbd5e1; font-style: italic;}
+    
+    .lantern {
+      position: absolute;
+      width: 25px; 
+      height: 40px;
+      background: #fde047;
+      border-radius: 4px 4px 10px 10px;
+      box-shadow: 0 0 25px #ea580c, inset 0 5px 10px white;
+      bottom: -60px;
+      animation-name: floatSky;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      opacity: 0.8;
+      z-index: 1;
+    }
+    
+    /* The tiny flame underneath */
+    .lantern::after {
+      content: '';
+      position: absolute;
+      width: 8px; height: 12px;
+      background: #ffedd5;
+      bottom: -5px; left: 50%; transform: translateX(-50%);
+      border-radius: 50%;
+      box-shadow: 0 0 10px #f97316;
+    }
+    
+    @keyframes floatSky {
+      0% { transform: translateY(0) rotate(-5deg); opacity: 0; }
+      10% { opacity: 0.9; }
+      50% { transform: translateY(-60vh) rotate(5deg); }
+      90% { opacity: 0.9; }
+      100% { transform: translateY(-120vh) rotate(-10deg); opacity: 0; }
+    }
+  </style>
+
+            <meta name="description" content="A beautiful component imported via Developer Studio AI.">
+            <meta name="robots" content="index, follow">
+            <meta property="og:title" content="Build a Floating Lantern Sky Background (Source Code)">
+            <meta property="og:description" content="A beautiful component imported via Developer Studio AI.">
+            <meta property="og:image" content="https://codescompiler.com/images/posts/css-floating-lantern-bg.png">
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Build a Floating Lantern Sky Background (Source Code)">
+            <meta name="twitter:description" content="A beautiful component imported via Developer Studio AI.">
+            <meta name="twitter:image" content="https://codescompiler.com/images/posts/css-floating-lantern-bg.png">
+          </head>
+<body>
+
+<!-- ── CODESCOMPILER DEMO HEADER ── -->
+<style>
+  #cc-demo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 48px;
+    background: #1a1b26;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: white;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+  }
+  #cc-demo-header a { text-decoration: none; color: white; }
+  .cc-logo { font-size: 14px; font-weight: 900; }
+  .cc-logo span { color: #04aa6d; }
+  .cc-sep { width: 1px; height: 20px; background: rgba(255,255,255,0.12); margin: 0 12px; }
+  .cc-title { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.65); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cc-actions { display: flex; gap: 8px; }
+  .cc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: rgba(255,255,255,0.7);
+  }
+  .cc-btn:hover { background: rgba(255,255,255,0.15); color: white; }
+  .cc-btn svg { width: 14px; height: 14px; }
+  @media (max-width: 600px) {
+    .cc-title { display: none; }
+    .cc-btn span { display: none; }
+  }
+</style>
+<header id="cc-demo-header">
+  <div style="display: flex; align-items: center; overflow: hidden;">
+    <a href="https://codescompiler.com" class="cc-logo" target="_blank" rel="dofollow"><span>Codes</span>Compiler</a>
+    <div class="cc-sep"></div>
+    <h1 class="cc-title" title="Build a Floating Lantern Sky Background (Source Code)" style="margin: 0; font-size: 13px; font-weight: 600;">📺 Build a Floating Lantern Sky Background (Source Code)</h1>
+  </div>
+  <div class="cc-actions">
+    <a href="https://codescompiler.com/blog/css-floating-lantern-bg" class="cc-btn" target="_blank" rel="dofollow" title="Read the full post">
+      <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+      <span>Back to Post</span>
+    </a>
+    <a href="index.html" class="cc-btn" target="_blank" download="css-floating-lantern-bg.html" title="Download source file">
+      <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+      <span>Download</span>
+    </a>
+    <button onclick="document.getElementById('cc-demo-header').style.display='none'" class="cc-btn" title="Hide header for fullscreen view">
+      <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l5-5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+      <span>Fullscreen</span>
+    </button>
+  </div>
+</header>
+<!-- ================================== -->
+
+  <h1>Make a Wish</h1>
+  <p>The sky is full of hope.</p>
+  
+  <!-- Generated via HTML for demo, but normally done via JS loops in production -->
+  <div class="lantern" style="left: 10%; animation-duration: 15s; animation-delay: 1s;"></div>
+  <div class="lantern" style="left: 25%; animation-duration: 22s; animation-delay: 5s;"></div>
+  <div class="lantern" style="left: 45%; animation-duration: 18s; animation-delay: 0s;"></div>
+  <div class="lantern" style="left: 65%; animation-duration: 25s; animation-delay: 3s;"></div>
+  <div class="lantern" style="left: 80%; animation-duration: 20s; animation-delay: 8s;"></div>
+  <div class="lantern" style="left: 90%; animation-duration: 16s; animation-delay: 2s;"></div>
+
+
+</body></html>
